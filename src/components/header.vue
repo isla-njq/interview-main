@@ -4,16 +4,27 @@
         :default-active="activeIndex"
         class="el-menu-demo"
         mode="horizontal"
-        @select="handleSelect"
+        router
       >
         <div class="interview_logo"><img src="../assets/img/01217514880511ebb6edd017c2d2eca2.jpg" alt=""></div>
-        <el-menu-item index="1">个人中心</el-menu-item>
-        <el-menu-item index="2">错题本</el-menu-item>
-        <el-menu-item index="3">题库</el-menu-item>
-        <el-menu-item index="4">首页</el-menu-item>
+        <el-menu-item index="personal">个人中心</el-menu-item>
+        <el-menu-item index="mistakes">错题本</el-menu-item>
+        <el-menu-item index="questionbank">题库</el-menu-item>
+        <el-menu-item index="interView">首页</el-menu-item>
+        <el-menu-item index="homePage">预览页</el-menu-item>
       </el-menu>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      activeIndex: window.location.hash.split('/')[window.location.hash.split.length]
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .header {
@@ -21,7 +32,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 2000;
   
 }
 .interview_logo {

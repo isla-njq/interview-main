@@ -1,40 +1,26 @@
 <template>
-  <div>
-    <div class="question" v-for="(item, index) in questionList" :key="index">
-      <question :list.sync="list" :questionId="item.id" :questionTitle="item.title" :questionContent="item.content"></question>
-    </div>
-    
+  <div class="test">
+    <question :questionsession="questionList"></question>
+    <test-footer></test-footer>
   </div>
 </template>
 
 <script>
-import question from "../../components/question.vue";
+import question from "../../components/test/question";
+import testFooter from "../../components/test/testFooter"
 export default {
+  name: 'test',
   components: {
     question,
+    testFooter
   },
   data() {
     return {
-      questionList: [
-        {
-          id: 1,
-          title: "js、、、、、、adsadas",
-          content: "1232312312323hhhaaa",
-        },
-        {
-          id: 2,
-          title: "js、、、、、、adsadas",
-          content: "1232312312323hhhaaa",
-        },{
-          id: 3,
-          title: "js、、、、、、adsadas",
-          content: "1232312312323hhhaaa",
-        },{
-          id: 4,
-          title: "js、、、、、、adsadas",
-          content: "1232312312323hhhaaa",
-        },
-      ],
+      questionList: {
+        id: 1,
+        title: "js12321321321adsadas",
+        content: ['爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶','爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶','爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶','爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶','爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶','爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶爱上地阿斯达斯多巴适哦大赛打死哦大叔大婶'],
+      },
       list:[]
     };
   },
@@ -47,7 +33,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.question {
-  margin: auto;
-}
 </style>

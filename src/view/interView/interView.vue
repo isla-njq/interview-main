@@ -4,7 +4,7 @@
       <el-col :span="16">
         <inter-main></inter-main>
       </el-col>
-      <el-col :span="8">
+      <el-col :span="7">
         <sider-bar></sider-bar>
       </el-col>
     </el-row>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import InterMain from '../../components/interView/main.vue'
+import InterMain from '../../components/interView/intermain.vue'
 import SiderBar from '@/components/interView/siderbar'
 export default {
   components: {
@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .inter-view {
-  width: 80%;
+  width: 90%;
   margin: auto;
   min-height: 90vh;
 }

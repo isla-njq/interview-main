@@ -1,6 +1,8 @@
 <template>
   <div class="subject-classify" :style="'background-color: '+ color + ';'">
-    <slot></slot>
+    <div class="text">
+      <span><slot></slot></span>
+    </div>
   </div>
 </template>
 
@@ -21,10 +23,26 @@ export default {
   width: 160px;
   height: 80px;
   line-height: 24px;
-  justify-self: flex-end;
+  display: inline-block;
   font-weight: 500;
   cursor: pointer;
-  text-align: center;
   box-sizing: border-box;
+  margin: 10px;
+  border-radius: 5px;
+  .text {
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(125%);
+    }
+  }
+  .text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    span {
+      margin: auto;
+    }
+  }
 }
 </style>
